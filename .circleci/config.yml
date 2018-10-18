@@ -1,7 +1,6 @@
 version: 2
 jobs:
   build:
-    # Add image here 
     docker:
       - image: cypress/base:8
     steps:
@@ -11,7 +10,6 @@ jobs:
         - v1-npm-deps-{{ checksum "package.json" }}
         - v1-npm-deps
     - run:
-        # Add commands here
         - npm i
         - npm start
         - npm test
